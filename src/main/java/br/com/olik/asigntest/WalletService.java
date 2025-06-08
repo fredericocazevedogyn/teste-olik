@@ -36,12 +36,19 @@ public class WalletService {
 
     private void validarSaldo(Wallet wallet) {
         if (wallet.getType() == Wallet.WalletType.ITAU && wallet.getAmount().compareTo(BigDecimal.ZERO) < 0) {
+            enviarSmsUsuario(wallet.getUserId());
             throw new WalletException("Saldo insuficiente para realizar a operação.");
         }
     }
 
     private void persistirWallet(Wallet wallet) {
         walletRepository.save(wallet);
+    }
+
+    private void enviarSmsUsuario(Long userId) {
+        log.info("Enviando sms de usuario {}", userId);
+        log.info("Saldo insuficiente!");
+        log.info("SMS enviado com sucesso!");
     }
 
 
