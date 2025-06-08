@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.olik.asigntest.WalletServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.085 s -- in br.com.olik.asigntest.WalletServiceTest
